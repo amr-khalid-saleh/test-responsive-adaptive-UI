@@ -6,10 +6,10 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return const Drawer(
       child: Column(
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             child: Icon(
               Icons.favorite_rounded,
               size: 42,

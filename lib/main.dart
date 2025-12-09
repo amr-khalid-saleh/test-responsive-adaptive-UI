@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:test_responsive_and_adaptive_ui/views/home_view.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_responsive_and_adaptive_ui/models/drawer_item_model.dart';
+import 'package:test_responsive_and_adaptive_ui/data/models/drawer_item_model.dart';
 
 class CustomDrawerItem extends StatelessWidget {
   const CustomDrawerItem({super.key, required this.drawerItemModel});

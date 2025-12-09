@@ -17,20 +17,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MobileLayout extends StatelessWidget {
-  const MobileLayout({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return Container(
-          margin: EdgeInsets.all(16.0),
-          color: Colors.blueAccent,
-          child: ListTile(title: Text('${index + 1}')),
-        );
-      },
-    );
-  }
-}

@@ -11,9 +11,24 @@ class HomeViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(child: const SizedBox(height: 16)),
-          CustomSliverGrid(),
-          CustomSliverListView(),
+          const SliverToBoxAdapter(child: SizedBox(height: 16)),
+          /*
+          Break Points On Width Devices Screens
+          * very small devices (portrait_phone): width<576
+          * small devices (landscape_phone): width>576
+          * medium devices (tablet): width>768
+          * large devices (desktops): width>992
+          * x-large devices (large_desktop_screen): width>1200
+          * xx-large devices (most_large_desktop_screens): width>1400
+           */
+          SliverToBoxAdapter(
+            child: LayoutBuilder(
+              builder: (context, constrains) {
+                return const CustomSliverGrid();
+              }
+            ),
+          ),
+          const CustomSliverListView(),
         ],
       ),
     );

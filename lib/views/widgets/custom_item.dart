@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomGridItem extends StatelessWidget {
-  const CustomGridItem({super.key});
+class CustomItem extends StatelessWidget {
+  const CustomItem({super.key});
 
   @override
   Widget build(BuildContext context) {

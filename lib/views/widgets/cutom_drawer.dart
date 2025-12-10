@@ -14,10 +14,10 @@ class CustomDrawer extends StatelessWidget {
           DrawerHeader(
             child: Icon(
               Icons.favorite_rounded,
-              size: 42,
-              color: Color(0xffDBDBDB),
+              size: 56,
             ),
           ),
+          SizedBox(height: 16.0,),
           CustomDrawerItemsListView(),
         ],
       ),

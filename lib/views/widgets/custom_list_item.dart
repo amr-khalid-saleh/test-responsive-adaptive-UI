@@ -6,7 +6,7 @@ class CustomListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65,
+      height: 74,
       decoration: BoxDecoration(
         color: Color(0xffECECEC),
         borderRadius: BorderRadius.circular(8),

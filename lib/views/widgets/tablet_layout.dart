@@ -9,7 +9,6 @@ class TabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        const SliverToBoxAdapter(child: SizedBox(height: 16)),
         CustomList(),
         const CustomSliverListView(),
       ],

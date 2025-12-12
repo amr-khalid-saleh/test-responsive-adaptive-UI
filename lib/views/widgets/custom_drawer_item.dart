@@ -20,3 +20,9 @@ class CustomDrawerItem extends StatelessWidget {
     );
   }
 }
+
+//Scale Factor
+//responsive font size
+//(min , max) -> value for font size
+
+double getResponsiveFontSize({required double fontSize}){}

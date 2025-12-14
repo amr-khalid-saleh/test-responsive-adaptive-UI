@@ -15,7 +15,12 @@ class CustomDrawerItem extends StatelessWidget {
         child: FittedBox(
           fit: BoxFit.scaleDown,
           alignment: Alignment.centerLeft,
-          child: Text(drawerItemModel.text),
+          child: Text(
+            drawerItemModel.text,
+            style: TextStyle(
+              fontSize: getResponsiveFontSize(context, fontSize: 16),
+            ),
+          ),
         ),
       ),
     );
@@ -29,6 +34,9 @@ class CustomDrawerItem extends StatelessWidget {
 double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = fontSize * scaleFactor;
+  double lowerLimit = fontSize * 0.8;
+  double upperLimit = fontSize * 1.2;
+  return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
 
 double getScaleFactor(BuildContext context) {

@@ -13,9 +13,10 @@ class CustomDrawerItem extends StatelessWidget {
       title: Padding(
         padding: const EdgeInsets.only(left: 16.0),
         child: FittedBox(
-            fit: BoxFit.scaleDown,
-            alignment: Alignment.centerLeft,
-            child: Text(drawerItemModel.text)),
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(drawerItemModel.text),
+        ),
       ),
     );
   }
@@ -25,4 +26,19 @@ class CustomDrawerItem extends StatelessWidget {
 //responsive font size
 //(min , max) -> value for font size
 
-double getResponsiveFontSize({required double fontSize}){}
+double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = fontSize * scaleFactor;
+}
+
+double getScaleFactor(BuildContext context) {
+  double width = MediaQuery.sizeOf(context).width;
+
+  if (width < 576) {
+    return width / 375;
+  } else if (width < 992) {
+    return width / 675;
+  } else {
+    return width / 1100;
+  }
+}
